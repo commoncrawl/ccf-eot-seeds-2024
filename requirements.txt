@@ -1,0 +1,7 @@
+jsonlines
+duckdb
+pandas
+numpy
+
+# development
+flake8

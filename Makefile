@@ -13,6 +13,10 @@ get-old-webgraph:
 	wget https://data.commoncrawl.org/projects/hyperlinkgraph/cc-main-2024-feb-apr-may/host/cc-main-2024-feb-apr-may-host-ranks.txt.gz
 	wget https://data.commoncrawl.org/projects/hyperlinkgraph/cc-main-2024-feb-apr-may/domain/cc-main-2024-feb-apr-may-domain-ranks.txt.gz
 
+get-seeds:
+	curl https://digital2.library.unt.edu/nomination/eth2024_bulk/reports/urls/ > bulk-urls.txt
+	curl https://digital2.library.unt.edu/nomination/eth2024/reports/urls/ > nominated-urls.txt
+
 make-subsets:
 	zcat cc-main-2024-jun-jul-aug-host-ranks.txt.gz | fgrep $$'\tgov.' > host-gov
 	zcat cc-main-2024-jun-jul-aug-host-ranks.txt.gz | fgrep $$'\tmil.' > host-mil
